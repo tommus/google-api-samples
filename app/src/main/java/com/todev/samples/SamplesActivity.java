@@ -10,11 +10,11 @@ import android.widget.ArrayAdapter;
 public class SamplesActivity extends ListActivity {
 
   public static final String[] TITLES = new String[] {
-      "Fence API Samples", "Map Clustering Samples"
+      "Fence API Samples", "Map Clustering Samples", "Firebase Chat Sample"
   };
 
   public static final Class[] ACTIVITIES = new Class[] {
-      FenceActivity.class, MapClusteringActivity.class
+      FenceActivity.class, MapClusteringActivity.class, FirebaseChatActivity.class
   };
 
   @Override

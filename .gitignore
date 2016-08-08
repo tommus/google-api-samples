@@ -6,6 +6,7 @@
 .gradletasknamecache
 .gradle/
 gradle/*.jar
+gradle.properties
 
 # Android
 build/

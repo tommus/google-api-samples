@@ -10,14 +10,24 @@ android {
     }
   }
 
+  buildTypes.each {
+    it.buildConfigField 'String', 'FIREBASE_URL', FirebaseUrl
+  }
+
   compileSdkVersion 24
 
   defaultConfig {
     applicationId "com.todev.fences"
-    minSdkVersion 14
+    minSdkVersion 16
     targetSdkVersion 24
     versionCode 1
     versionName "1.0"
+  }
+
+  packagingOptions {
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/LICENSE-FIREBASE.txt'
+    exclude 'META-INF/NOTICE'
   }
 }
 
@@ -26,8 +36,10 @@ dependencies {
 
   compile 'com.android.support:appcompat-v7:24.1.1'
   compile 'com.android.support:design:24.1.1'
+  compile 'com.firebase:firebase-client-android:2.5.2'
+  compile 'com.firebaseui:firebase-ui:0.3.1'
   compile 'com.getbase:floatingactionbutton:1.10.1'
-  compile 'com.google.android.gms:play-services-contextmanager:9.2.1'
-  compile 'com.google.android.gms:play-services-maps:9.2.1'
+  compile 'com.google.android.gms:play-services-contextmanager:9.4.0'
+  compile 'com.google.android.gms:play-services-maps:9.4.0'
   compile 'com.google.maps.android:android-maps-utils:0.4.3'
 }
