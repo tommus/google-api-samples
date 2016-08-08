@@ -12,6 +12,8 @@ android {
 
   buildTypes.each {
     it.buildConfigField 'String', 'FIREBASE_URL', FirebaseUrl
+    it.buildConfigField 'double', 'HOME_LONGITUDE', HomeLongitude
+    it.buildConfigField 'double', 'HOME_LATITUDE', HomeLatitude
   }
 
   compileSdkVersion 24
